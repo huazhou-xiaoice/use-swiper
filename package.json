@@ -1,16 +1,11 @@
 {
-  "name": "use-swiper",
-  "version": "1.2.1",
+  "name": "@zhouhua_rinna/use-swiper",
+  "version": "1.0.1",
   "description": "A react based use hook for carousel",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Jay Gao",
   "license": "MIT",
-  "homepage": "https://gaoljie.github.io/use-swiper/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gaoljie/use-swiper"
-  },
   "keywords": [
     "swiper",
     "carousel",
@@ -61,8 +56,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

@@ -14,7 +14,7 @@ export interface SlideProps<T> {
   curIndex: number;
   prev: () => void;
   next: () => void;
-  moveTo: (index: number) => void;
+  moveTo: (index: number, animate?: boolean) => void;
 }
 
 interface RawOptionProps {
@@ -138,7 +138,7 @@ export default function useSwiper<T extends HTMLElement>(
   }, [container, loop, slidesPerView, speed]);
 
   const moveTo = useCallback(
-    (index: number) => {
+    (index: number, animate?: boolean) => {
       setCurIndex(prev => {
         if (!container) return prev;
 
@@ -156,7 +156,7 @@ export default function useSwiper<T extends HTMLElement>(
           deltaX: (prev - index) * slideWidth,
           curIndex: prev,
           rightStart: (childrenNum - prev) * slideWidth,
-          animate: true
+          animate: animate === undefined ? true : animate
         });
 
         return index;

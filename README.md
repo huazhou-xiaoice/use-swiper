@@ -1,24 +1,28 @@
+**IMPORTANT**: this is a minimalistic fork, the original url is [here](https://github.com/gaoljie/use-swiper).
+
+# use-swiper
+
 ### Installation
 
 #### yarn
 
-`yarn add use-swiper`
+`yarn add @zhouhua_rinna/use-swiper`
 
 #### npm
 
-`npm install use-swiper`
+`npm install @zhouhua_rinna/use-swiper`
 
 #### include css
 
 ```js
-import "use-swiper/lib/swiper.min.css";
+import "@zhouhua_rinna/use-swiper/lib/swiper.min.css";
 ```
 
 ### Basic Usage
 
 ```tsx
 import React from "react";
-import useSwiper from "use-swiper";
+import useSwiper from "@zhouhua_rinna/use-swiper";
 
 const App = () => {
   const { ref } = useSwiper();
@@ -32,7 +36,3 @@ const App = () => {
   );
 };
 ```
-
-### Documentation
-
-[Doc](https://gaoljie.github.io/use-swiper/)
